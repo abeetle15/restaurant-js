@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "js practice",
   "main": "index.js",
+  "homepage": "http://aBeetle15.github.io/restaurant-js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "restaurant-js"
+    "url": "git+https://github.com/aBeetle15/restaurant-js.git"
+
   },
   "author": "aBeetle15",
   "license": "ISC",
