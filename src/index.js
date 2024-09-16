@@ -1,18 +1,41 @@
 import "./styles.css";
+import "./menu.css"
 import "./reset.css";
+import { layoutHome, layoutMain, HomeNav, MenuContent, AboutContent, ContactContent } from "./home";
 
-const contentDiv = document.querySelector('#content');
+export const title = document.querySelector('#main-title')
+export const contentDiv = document.querySelector('#content');
 
-contentDiv.innerHTML = HomeNav();
+title.addEventListener('click', setupHome)
+setupHome();
 
-function HomeNav() {
-  return `
-      <h2 id="welcome-sub">La mejor arepa de chócolo de Bogotá</h2>
+function setupHome(){
+  layoutHome();
+  contentDiv.innerHTML = '';
+  contentDiv.innerHTML = HomeNav();
+  const menuBtn = document.querySelector('#menu-btn');
+  const aboutBtn = document.querySelector('#about-btn');
+  const contactBtn = document.querySelector('#contact-btn');
 
-    <nav id="welcome-nav">
-      <button class="btn">Nuesta carta</button>
-      <button class="btn">Sobre nosotros</button>
-      <button class="btn">Contacto</button>
-    </nav>
-  `
+  menuBtn.addEventListener('click', setupMenu)
+  aboutBtn.addEventListener('click', setupAbout)
+  contactBtn.addEventListener('click', setupContact)
 }
+
+function setupMenu() {
+  layoutMain();
+  contentDiv.innerHTML = '';
+  contentDiv.innerHTML = MenuContent();
+}
+function setupAbout() {
+  layoutMain();
+  contentDiv.innerHTML = '';
+  contentDiv.innerHTML = AboutContent();
+}
+function setupContact() {
+  layoutMain();
+  contentDiv.innerHTML = '';
+  contentDiv.innerHTML = ContactContent();
+}
+
+

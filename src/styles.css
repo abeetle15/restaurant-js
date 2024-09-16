@@ -9,6 +9,20 @@ body {
   font-family: body, sans-serif;
 }
 
+
+#main-title {
+  font-family: title;
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: -1.5rem;
+  cursor: pointer;
+}
+
+#main-title.high {
+  height: 20svh;
+  font-size: 5rem;
+}
+
 #content {
   display: flex;
   flex-direction: column;
@@ -16,12 +30,10 @@ body {
   gap: 1.8rem;
 }
 
-#main-title {
-  font-family: title;
-  font-size: 8rem;
-  text-align: center;
-  margin-bottom: -1.5rem;
+#content.main {
+  min-height: 80svh;
 }
+
 
 #welcome-sub {
   font-size: 1.5rem;
@@ -48,4 +60,11 @@ body {
 .btn:hover {
   background-color: rgb(189, 91, 91);
   font-weight: 700;
+}
+
+img {
+  height: 600px; 
+  position: absolute;
+  bottom: -190px; 
+  right: -200px;
 }

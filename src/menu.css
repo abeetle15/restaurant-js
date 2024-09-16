@@ -1,0 +1,30 @@
+/* ---------------------------------- menu ---------------------------------- */
+
+.menu {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between; /* Aligns name and price */
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; /* Adds a line between items */
+  font-family: Arial, sans-serif;
+}
+
+.price {
+  font-weight: bold;
+  margin-left: 2rem;
+}
+/* ---------------------------------- about --------------------------------- */
+.about-sub {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.about-p {
+  width: 65ch;
+}
